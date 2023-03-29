@@ -10,9 +10,8 @@ class GoogleSuggestions extends Component {
     this.setState({searchinput: event.target.value})
   }
 
-  showsuggestion = id => {
-    const filtered = suggestionsList.filter(each => each.id === id)
-    this.setState({searchinput: filtered.suggestion})
+  showsuggestion = (id, suggestion) => {
+    this.setState({searchinput: suggestion})
   }
 
   render() {
@@ -50,13 +49,15 @@ class GoogleSuggestions extends Component {
               className="search_bar"
             />
           </div>
-          {searchResult.map(each => (
-            <SuggestionItem
-              showsuggestion={this.showsuggestion}
-              searchList={each}
-              key={each.id}
-            />
-          ))}
+          <ul>
+            {searchResult.map(each => (
+              <SuggestionItem
+                showsuggestion={this.showsuggestion}
+                searchList={each}
+                key={each.id}
+              />
+            ))}
+          </ul>
         </div>
       </div>
     )

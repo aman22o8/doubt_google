@@ -6,15 +6,14 @@ const SuggestionItem = props => {
   //   console.log(searchList)
   const {suggestion, id} = searchList
   const clickingpara = () => {
-    showsuggestion(id)
+    showsuggestion(id, suggestion)
   }
   //   console.log(suggestion)
   return (
     <li className="list_container">
-      <p onClick={clickingpara} className="description">
-        {suggestion}
-      </p>
+      <p className="description">{suggestion}</p>
       <img
+        onClick={clickingpara}
         src="https://assets.ccbp.in/frontend/react-js/diagonal-arrow-left-up.png "
         alt="arrow"
         className="image_1"
