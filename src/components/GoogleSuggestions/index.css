@@ -1,0 +1,44 @@
+/* Write your CSS here */
+.main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card_container {
+  padding-top: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 16px 0px #bfbfbf;
+  width: 50vw;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+}
+.google_image_ {
+  text-align: center;
+}
+.google_image {
+  height: 110px;
+  width: 40vw;
+}
+.inbox {
+  display: flex;
+  align-items: center;
+}
+.search_icon {
+  height: 30px;
+  width: 30px;
+  border-style: none;
+  border-width: 0px;
+}
+.search_bar {
+  background-color: #ffffff;
+  color: #475569;
+  height: 30px;
+  width: 60vw;
+  border-width: 0px;
+  border-style: none;
+  outline: none;
+}
